@@ -1,3 +1,3 @@
 # selflearn
 
-efficient algos in golang
+efficient algos in golang.
