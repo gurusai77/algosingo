@@ -14,6 +14,6 @@ func movezeros(arr []int) []int {
 }
 
 func main() {
-	arr := []int{1, 2, 0, 3, 2, 1, 0, 1, 1, -1, -10}
+	arr := []int{1, 2, 0, 0, 2, 1, 0, 1, 1, -1, -10}
 	fmt.Println(movezeros(arr))
 }
