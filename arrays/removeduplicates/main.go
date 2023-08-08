@@ -3,16 +3,18 @@ package main
 import "fmt"
 
 func removeDuplicates(nums []int) int {
-	var s int
-	for i := 0; i < len(nums); i++ {
-		if nums[i] == nums[s] {
+	var unique int
+	for i := 2; i < len(nums); i++ {
+		// if nums[i] == nums[i-2] && nums[i] == nums[i-1] {
+		if nums[i] == nums[i-2] {
+			nums[i] = 0
 			continue
 		}
-		s++
-		nums[s] = nums[i]
+		unique++
 	}
-	return s + 1
+	fmt.Println(nums)
+	return unique + 1
 }
 func main() {
-	fmt.Println(removeDuplicates([]int{1, 2, 3, 3, 3}))
+	fmt.Println(removeDuplicates([]int{1, 2, 2, 2, 3, 3, 3, 3}))
 }
