@@ -10,6 +10,7 @@ import "fmt"
 //Bubble sort has a time complexity of O(N2) which makes it very slow for large data sets.
 //Bubble sort is a comparison-based sorting algorithm, which means that it requires a comparison operator to determine the relative order of elements in the input data set. It can limit the efficiency of the algorithm in certain cases.
 
+// pushes the max element to the end of array
 // best case is o(n), worst case is o(n2)
 
 func bubble(a []int) []int {

@@ -11,6 +11,8 @@ import "fmt"
 //Does not work well on large datasets.
 //Does not preserve the relative order of items with equal keys which means it is not stable.
 
+//find and selects the index of min element and swap with current element in outer loop
+
 // worst and avg case o(n2)
 func selection(a []int) []int {
 	for i := 0; i < len(a); i++ {
