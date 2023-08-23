@@ -30,5 +30,5 @@ func bubble(a []int) []int {
 }
 
 func main() {
-	fmt.Println(bubble([]int{85, 9, 2, 34, 76, 67, 45}))
+	fmt.Println(bubble([]int{85, 9, -2, -34, 76, 67, 45}))
 }

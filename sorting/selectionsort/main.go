@@ -18,7 +18,7 @@ func selection(a []int) []int {
 	for i := 0; i < len(a); i++ {
 		// store the ith index as min element
 		minIdx := i
-		// find minimum element
+		// find index of minimum element
 		for j := i + 1; j < len(a); j++ {
 			if a[j] < a[minIdx] {
 				minIdx = j
@@ -31,5 +31,5 @@ func selection(a []int) []int {
 }
 
 func main() {
-	fmt.Println(selection([]int{56, 44, 67, 78, 23, 9, 88, 87}))
+	fmt.Println(selection([]int{56, 44, 67, -78, -23, 9, 88, 87}))
 }
