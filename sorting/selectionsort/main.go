@@ -23,13 +23,13 @@ func selection(a []int) []int {
 			if a[j] < a[minIdx] {
 				minIdx = j
 			}
-			// sort with the ith element
-			a[i], a[minIdx] = a[minIdx], a[i]
 		}
+		// sort with the ith element
+		a[i], a[minIdx] = a[minIdx], a[i]
 	}
 	return a
 }
 
 func main() {
-	fmt.Println(selection([]int{56, 44, 67, 78, 23, 9}))
+	fmt.Println(selection([]int{56, 44, 67, 78, 23, 9, 88, 87}))
 }
