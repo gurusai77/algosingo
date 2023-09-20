@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func subarraySum(nums []int, k int) int {
 	cache := make(map[int]int)
@@ -28,5 +30,5 @@ func subarraySum(nums []int, k int) int {
 }
 
 func main() {
-	fmt.Println(subarraySum([]int{-3, 3, 2, 3}, 0))
+	fmt.Println(subarraySum([]int{15, -2, 2, -8, 1, 7, 10, 23}, 0))
 }
