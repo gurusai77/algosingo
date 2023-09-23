@@ -32,7 +32,7 @@ func adddigitstotarget(a []int, target int) (x [][]int) {
 	return x
 }
 
-func twoSum(nums []int, target int) []int {
+func twoSum(nums []int, target int) (x [][]int) {
 	// Space: O(n)
 	s := make(map[int]int)
 
@@ -40,11 +40,11 @@ func twoSum(nums []int, target int) []int {
 	for idx, num := range nums {
 		// Time: O(1)
 		if pos, ok := s[target-num]; ok {
-			return []int{pos, idx}
+			x = append(x, []int{pos, idx})
 		}
 		s[num] = idx
 	}
-	return []int{}
+	return x
 }
 
 func main() {
