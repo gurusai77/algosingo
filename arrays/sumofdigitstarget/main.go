@@ -2,30 +2,34 @@ package main
 
 import "fmt"
 
-//tems are not sorted
+// two solutions as below
+
+//items are not sorted
 //Space complexity must be O(1): brute force
-//Space complexuty can be O(n): hashmap/set
+//Space complexity can be O(n): hashmap/set
+
 //Items are sorted: two pointers
 
-func adddigitstotarget(a []int, target int) (int, int) {
-	// if array is not listed this solution fails
-
+// two pointer
+func adddigitstotarget(a []int, target int) (x [][]int) {
+	// if array is not sorted this solution fails
 	if len(a) <= 1 {
-		return 0, 0
+		return [][]int{}
 	}
 
 	ptr1, ptr2 := 0, len(a)-1
 	for ptr1 < ptr2 {
 		sum := a[ptr2] + a[ptr1]
 		if target == sum {
-			return ptr1, ptr2
-		} else if sum > target {
+			x = append(x, []int{ptr1, ptr2})
+		}
+		if sum > target {
 			ptr2--
-		} else if sum < target {
+		} else {
 			ptr1++
 		}
 	}
-	return 0, 0
+	return x
 }
 
 func twoSum(nums []int, target int) []int {
@@ -44,6 +48,6 @@ func twoSum(nums []int, target int) []int {
 }
 
 func main() {
-	fmt.Println(adddigitstotarget([]int{1, 4, 5, 8, 5, 4, 6}, 9))
-	fmt.Println(twoSum([]int{1, 4, 5, 8, 5, 4, 6}, 13))
+	fmt.Println(adddigitstotarget([]int{1, 2, 3, 4, 5, 6, 7, 8, 9}, 9))
+	fmt.Println(twoSum([]int{1, 2, 3, 4, 5, 6, 7, 8, 9}, 13))
 }
