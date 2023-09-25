@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	if isPalindrome("liril") {
+	fmt.Println(isPalindrome("lir`il"))
+	if isPalindrome("lir`il") {
 		fmt.Println("palindrome string")
 	}
 }
