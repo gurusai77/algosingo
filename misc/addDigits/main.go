@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 /*
 
@@ -55,7 +58,28 @@ func sDigits(num int) int {
 	return sDigits(result)
 }
 
+func reverseDigits(num int) int {
+	if num < 10 {
+		return num
+	}
+
+	var result int
+	for num != 0 {
+		s := num % 10
+		result = result*10 + s
+		num = num / 10
+	}
+
+	return result
+}
+
+func countDigits(a int) float64 {
+	return math.Log10(float64(a))
+}
+
 func main() {
 	fmt.Println(sDigits(345678))
 	fmt.Println(addDigits(78))
+	fmt.Println(reverseDigits(78))
+	fmt.Println(math.Ceil(countDigits(78828391854)))
 }
