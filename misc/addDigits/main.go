@@ -25,7 +25,10 @@ Let's observe the pattern of adding the units digit from 1 to 18 below:
 17 -> 8
 18 -> 9
 
-We can observe that the result of adding the units digit appears in a cycle, which is from 1 to 9 repeating constantly. Therefore, we can simply take the given number modulo 9, and the result will be the sum of the digits. If the result is 0, then we return 9.
+We can observe that the result of adding the units digit appears in a cycle,
+which is from 1 to 9 repeating constantly. Therefore, we can simply take the given number modulo 9,
+and the result will be the sum of the digits. If the result is 0, then we return 9.
+
 */
 
 func addDigits(num int) int {
@@ -54,4 +57,5 @@ func sDigits(num int) int {
 
 func main() {
 	fmt.Println(sDigits(345678))
+	fmt.Println(addDigits(78))
 }

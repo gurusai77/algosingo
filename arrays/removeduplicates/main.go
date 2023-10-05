@@ -13,7 +13,7 @@ func removeDuplicates(nums []int) int {
 		unique++
 	}
 	fmt.Println(nums)
-	return unique + 1
+	return unique
 }
 func main() {
 	fmt.Println(removeDuplicates([]int{1, 2, 2, 2, 3, 3, 3, 3}))
