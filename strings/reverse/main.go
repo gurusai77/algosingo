@@ -6,7 +6,7 @@ func reverseString(s string) string {
 	i := 0
 	j := len(s) - 1
 	rns := []rune(s)
-	for i < len(rns)/2 && i < j {
+	for i <= len(rns)/2 && i < j {
 		rns[i], rns[j] = rns[j], rns[i]
 		i++
 		j--
