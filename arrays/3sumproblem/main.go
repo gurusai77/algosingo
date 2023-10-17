@@ -21,6 +21,7 @@ func tripletsSum(a []int, sum int) (l [][]int) {
 func tripSum(a []int, reqSum int) (l [][]int) {
 	n := len(a)
 	for i := 0; i < n; i++ {
+		// handle duplicates
 		if i != 0 && a[i] == a[i-1] {
 			continue
 		}
@@ -35,6 +36,7 @@ func tripSum(a []int, reqSum int) (l [][]int) {
 				l = append(l, []int{a[i], a[j], a[k]})
 				j++
 				k--
+				// handle duplicates
 				for j < k && a[j] == a[j-1] {
 					j++
 				}

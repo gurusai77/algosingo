@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+// maximum sum in an array
 func kadane(arr []int) (int, int, int) {
 	maxSoFar := math.MinInt
 	sum := 0
