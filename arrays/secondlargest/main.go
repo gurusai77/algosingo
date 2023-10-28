@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"math/bits"
+	"math"
 )
 
 func secondl(arr []int) int {
@@ -18,7 +18,7 @@ func secondl(arr []int) int {
 }
 
 func secondsmallest(arr []int) int {
-	fs, ss := arr[0], (1<<bits.UintSize)/2-1
+	fs, ss := arr[0], math.MinInt
 	for _, v := range arr {
 		if v < fs {
 			fs, ss = v, fs

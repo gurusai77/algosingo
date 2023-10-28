@@ -80,6 +80,6 @@ func countDigits(a int) float64 {
 func main() {
 	fmt.Println(sDigits(345678))
 	fmt.Println(addDigits(78))
-	fmt.Println(reverseDigits(78))
+	fmt.Println(reverseDigits(788))
 	fmt.Println(math.Ceil(countDigits(78828391854)))
 }
