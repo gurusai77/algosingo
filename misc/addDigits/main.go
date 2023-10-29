@@ -73,6 +73,26 @@ func reverseDigits(num int) int {
 	return result
 }
 
+func isPalindrome(x int) bool {
+	reverseNum := 0
+	tempOriginal := x
+
+	if x < 0 {
+		return false
+	}
+
+	if x >= 0 && x < 10 {
+		return true
+	}
+
+	for tempOriginal != 0 {
+		reverseNum = reverseNum*10 + (tempOriginal % 10) // take last digit of x and put it on reverseNum
+		tempOriginal /= 10
+	}
+
+	return reverseNum == x
+}
+
 func countDigits(a int) float64 {
 	return math.Log10(float64(a))
 }
@@ -82,4 +102,5 @@ func main() {
 	fmt.Println(addDigits(78))
 	fmt.Println(reverseDigits(788))
 	fmt.Println(math.Ceil(countDigits(78828391854)))
+	fmt.Println(isPalindrome(21120))
 }
