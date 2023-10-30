@@ -5,16 +5,21 @@ import (
 	"math"
 )
 
-func longestarray(a []int, k int) int {
+func longestarray(a []int, k int) (int, []int) {
 	sum := a[0]
 	maxLen := 0
 	j := 0
-	for i := 0; i < len(a); {
+	i := 0
+	var b []int
+	for i < len(a) {
 		for sum > k {
 			sum -= a[j]
 			j++
 		}
 		if sum == k {
+			if (i - j + 1) > maxLen {
+				b = a[j : i+1]
+			}
 			maxLen = int(math.Max(float64(maxLen), float64(i-j+1)))
 		}
 		i++
@@ -22,7 +27,7 @@ func longestarray(a []int, k int) int {
 			sum += a[i]
 		}
 	}
-	return maxLen
+	return maxLen, b
 }
 
 func longestarray2(a []int, k int) int {
