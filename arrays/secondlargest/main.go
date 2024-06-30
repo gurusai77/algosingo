@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"time"
 )
 
 func secondl(arr []int) int {
@@ -44,19 +45,20 @@ func removeDuplicates(arr []int) ([]int, int) {
 this solution handles negative numbers also
 */
 func main() {
-	arr := []int{100, 5, 2, 3, 3, 6, 4, 1, 1, -1, -10}
-	fl := secondl(arr)
-	ss := secondsmallest(arr)
-	fmt.Println(fl)
-	fmt.Println(ss)
-	arr1 := []int{-10, 1, 1, -2, -10}
-	fmt.Println(secondl(arr1))
-	arr2 := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
-	arr2, i := removeDuplicates(arr2)
-	fmt.Println(arr2, i)
-	// make other numbers 0
-	for j := i; j < len(arr2)-1; j++ {
-		arr2[j+1] = 0
-	}
-	fmt.Println(arr2)
+	fmt.Printf("time: %v", time.Now().UnixMilli())
+	//arr := []int{100, 5, 2, 3, 3, 6, 4, 1, 1, -1, -10}
+	//fl := secondl(arr)
+	//ss := secondsmallest(arr)
+	//fmt.Println(fl)
+	//fmt.Println(ss)
+	//arr1 := []int{-10, 1, 1, -2, -10}
+	//fmt.Println(secondl(arr1))
+	//arr2 := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
+	//arr2, i := removeDuplicates(arr2)
+	//fmt.Println(arr2, i)
+	//// make other numbers 0
+	//for j := i; j < len(arr2)-1; j++ {
+	//	arr2[j+1] = 0
+	//}
+	//fmt.Println(arr2)
 }

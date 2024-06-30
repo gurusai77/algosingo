@@ -17,9 +17,12 @@ func bubble(a []int) []int {
 	for i := len(a) - 1; i >= 0; i-- {
 		swap := false
 		for j := 0; j <= i-1; j++ {
+			fmt.Printf("j index:%v\n", j)
+			fmt.Printf("i index:%v\n", i)
 			if a[j] > a[j+1] {
 				a[j], a[j+1] = a[j+1], a[j]
 				swap = true
+				fmt.Printf("arry updated:%v\n", a)
 			}
 		}
 		if swap == false {
@@ -30,5 +33,5 @@ func bubble(a []int) []int {
 }
 
 func main() {
-	fmt.Println(bubble([]int{85, 9, -2, -34, 76, 67, 45}))
+	fmt.Println(bubble([]int{85, 9, -2, -34, -76, 67, 45}))
 }

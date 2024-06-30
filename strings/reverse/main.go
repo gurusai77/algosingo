@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"log"
+	"os"
+)
 
 func reverseString(s string) string {
 	i := 0
@@ -22,6 +26,14 @@ func reverse(str string) (result string) {
 }
 
 func main() {
-	fmt.Println(reverseString("stephen"))
-	fmt.Println(reverse("stephen"))
+	//fmt.Println(reverseString("stephen"))
+	//fmt.Println(reverse("stephen"))
+	output := "./output"
+	path := output
+	if _, err := os.Stat(path); errors.Is(err, os.ErrNotExist) {
+		err := os.Mkdir(path, os.ModePerm)
+		if err != nil {
+			log.Println(err)
+		}
+	}
 }
