@@ -22,7 +22,7 @@ type Video struct {
 
 func main() {
 	var dbPool *pgxpool.Pool
-	databaseUrl := "postgres://postgres:mypassword@localhost:5432/postgres"
+	databaseUrl := "postgres://user:pass@localhost:5432/postgres"
 
 	// this returns connection pool
 	dbPool, err := pgxpool.Connect(context.Background(), databaseUrl)
