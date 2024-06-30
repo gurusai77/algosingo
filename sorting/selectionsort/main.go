@@ -18,14 +18,17 @@ func selection(a []int) []int {
 	for i := 0; i < len(a); i++ {
 		// store the ith index as min element
 		minIdx := i
+		fmt.Printf("minIndx:%v\n", minIdx)
 		// find index of minimum element
 		for j := i + 1; j < len(a); j++ {
 			if a[j] < a[minIdx] {
 				minIdx = j
+				fmt.Printf("updated minIndx:%v\n", minIdx)
 			}
 		}
 		// sort with the ith element
 		a[i], a[minIdx] = a[minIdx], a[i]
+		fmt.Println(a)
 	}
 	return a
 }
