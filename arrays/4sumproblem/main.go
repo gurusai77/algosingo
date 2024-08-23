@@ -25,7 +25,7 @@ func fourSumProblem(a []int, reqSum int) (store [][]int) {
 					k++
 					l--
 					for k < l && a[k] == a[k-1] {
-						j++
+						k++
 					}
 					for k < l && a[l] == a[l+1] {
 						l--

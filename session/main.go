@@ -1,16 +1,14 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-var s = 10
+//var s = 10
 
-func init() {
-	fmt.Println("init")
-	fmt.Println(s)
-	fmt.Println(s1)
-}
+//func init() {
+//	fmt.Println("init")
+//	fmt.Println(s)
+//	fmt.Println(s1)
+//}
 
 var s1 = 10
 
@@ -34,11 +32,11 @@ var s1 = 10
 //	}
 //}
 
-//func slicePointer(s []int) *int {
-//	return &s[0]
-//}
-//
-//const SESSIONVALUE = 1
+//	func slicePointer(s []int) *int {
+//		return &s[0]
+//	}
+const SESSIONVALUE = 1
+
 //
 //var (
 //	Cookie      = ""
@@ -46,48 +44,53 @@ var s1 = 10
 //	SessionId   = ""
 //)
 
-//func main() {
-//	//var i int = 5
-//	//fmt.Printf("variable value of i :%v \n", i)
-//	//fmt.Printf("variable value of i :%T \n", i)
-//	//for i <= 10 {
-//	//	fmt.Printf("variable in loop value of i :%v \n", i)
-//	//	fmt.Printf("i value is: %v\n", i)
-//	//	i++
-//	//}
-//	//for i := 0; i <= 10; i++ {
-//	//	fmt.Printf("variable in loop value of i :%v \n", i)
-//	//	fmt.Printf("i value is: %v\n", i)
-//	//}
-//
-//	// arrays and slices
-//	a := [5]string{"1", "2", "2", "4", "5"}
-//	fmt.Printf("array :%v \n", a)
-//
-//	b := []string{"1", "2", "2", "4", "5"}
-//	fmt.Printf("slice :%v", b)
-//
-//	//j := 10
-//	//fmt.Printf("variable value of j :%v \n", j)
-//	//fmt.Printf("variable value of j :%T \n", j)
-//	//
-//	//k, l := 10, true
-//	//fmt.Printf("variable value of k :%v \n", k)
-//	//fmt.Printf("variable value of k :%d \n", k)
-//	//fmt.Printf("variable value of l :%T \n", l)
-//	//
-//	//fmt.Printf("constant value of session :%v \n", SESSIONVALUE)
-//	//var a rune = 'a'
-//	//fmt.Printf("value of a :%v \n", a)
-//	//fmt.Printf("type of a :%T \n", a)
-//	//
-//	//var b string = "sample"
-//	//fmt.Printf("value  of b :%v \n", b)
-//	//fmt.Printf("value  of b :%s \n", b)
-//	//
-//	//if i == j {
-//	//	fmt.Println("tue")
-//	//}
-//	//
-//
-//}
+func main() {
+	var i int = 5
+	//s := "hello"
+	fmt.Printf("variable value of i :%v \n", i)
+	fmt.Printf("variable value of i :%T \n", i)
+	for i <= 10 {
+		fmt.Printf("variable in loop value of i :%v \n", i)
+		fmt.Printf("i value is: %v\n", i)
+		i++
+	}
+	for i := 0; i <= 10; i++ {
+		fmt.Printf("variable in loop value of i :%v \n", i)
+		fmt.Printf("i value is: %v\n", i)
+	}
+
+	// arrays and slices
+	a := [5]string{"1", "2", "2", "4", "5"}
+	fmt.Printf("array :%v \n", a)
+
+	b := []string{"1", "2", "2", "4", "5"}
+	c := make([]float64, 10)
+	d := &b
+	fmt.Printf("slice :%v", b)
+	fmt.Printf("slice :%v", c)
+	fmt.Printf("slice :%p", b)
+	fmt.Printf("slice address:%p", &d)
+
+	j := 10
+	fmt.Printf("variable value of j :%v \n", j)
+	fmt.Printf("variable value of j :%T \n", j)
+
+	k, l := 10, true
+	fmt.Printf("variable value of k :%v \n", k)
+	fmt.Printf("variable value of k :%d \n", k)
+	fmt.Printf("variable value of l :%T \n", l)
+
+	fmt.Printf("constant value of session :%v \n", SESSIONVALUE)
+	var m rune = 'a'
+	fmt.Printf("value of a :%v \n", m)
+	fmt.Printf("type of a :%T \n", m)
+
+	var n string = "sample"
+	fmt.Printf("value  of b :%v \n", n)
+	fmt.Printf("value  of b :%T \n", n)
+
+	if i == j {
+		fmt.Print("tue")
+	}
+
+}
