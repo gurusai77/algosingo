@@ -7,5 +7,4 @@ import (
 func main() {
 	// api.New()
 	ginexample.GinServer()
-	
 }

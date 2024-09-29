@@ -38,8 +38,13 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func (s *Server) route() {
 	s.Router.Handle("/test", http.HandlerFunc(s.testHandler))
+	s.Router.Handle("/hello", http.HandlerFunc(s.helloHandler))
 }
 
 func (s *Server) testHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("test"))
+}
+
+func (s *Server) helloHandler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("hello handler"))
 }

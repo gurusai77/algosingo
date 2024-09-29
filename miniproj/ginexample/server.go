@@ -15,24 +15,28 @@ var testError = errors.New("test error")
 
 func GinServer() {
 	router := gin.Default()
-	router.Use(authHandler)
+	router.GET("/authget", testHandler).Use(authHandler)
 	router.GET("/test2", testHandler)
+	router.GET("/hello", testHandler)
+	router.DELETE("/testdelete", deleteHandler).GET("/testget", testHandler)
 	err := router.Run(":4040")
 	if err != nil {
 		return
 	}
-	fmt.Println("calling service")
-	CallService()
-	fmt.Println("end service")
+}
+
+func deleteHandler(ctx *gin.Context) {
+	t := TestObj{
+		Name: "test name",
+	}
+	ctx.XML(http.StatusAccepted, t)
 }
 
 func testHandler(ctx *gin.Context) {
 	t := TestObj{
 		Name: "test name",
 	}
-
-	ctx.JSON(http.StatusOK, t)
-
+	ctx.XML(http.StatusOK, t)
 }
 
 func authHandler(ctx *gin.Context) {
