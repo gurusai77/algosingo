@@ -23,7 +23,7 @@ type Video struct {
 func main() {
 	fmt.Println("server started")
 	var dbPool *pgxpool.Pool
-	databaseUrl := "postgres://postgres:admin@localhost:5432/postgres"
+	databaseUrl := "postgres://post:post@localhost:5432/postgres"
 
 	// this returns connection pool
 	dbPool, err := pgxpool.Connect(context.Background(), databaseUrl)
